@@ -2,23 +2,26 @@
 # 🔹 Dependências principais — Projack Impulse (API + IA + Azure)
 # ============================================================
 
-fastapi==0.115.0
-uvicorn==0.32.0
+# Framework principal da API
+fastapi==0.115.2
+uvicorn[standard]==0.32.0
 
-# Flask para compatibilidade com APIs externas ou integração futura
+# Flask (usado apenas se necessário para APIs legadas ou integração futura)
 Flask==3.1.0
 
 # HTTP Requests e manipulação de APIs externas
 requests==2.32.3
 
 # Integração com Google Gemini (IA)
-google-genai==1.48.0
+google-genai==0.2.2
 google-auth==2.42.1
 
 # Manipulação de variáveis de ambiente (.env)
 python-dotenv==1.0.1
 
-# Utilitários do FastAPI e dependências internas
+# ============================================================
+# 🔹 Dependências auxiliares (instaladas automaticamente com FastAPI)
+# ============================================================
 pydantic==2.9.2
 annotated-types==0.7.0
 anyio==4.11.0
@@ -28,17 +31,18 @@ httpx==0.28.1
 idna==3.11
 sniffio==1.3.1
 
-# Logging e segurança
+# ============================================================
+# 🔹 Flask internals (já vêm com Flask, mas explicitamos por compatibilidade)
+# ============================================================
 itsdangerous==2.2.0
 blinker==1.9.0
 Jinja2==3.1.4
 MarkupSafe==3.0.2
 
-# Certificados e codificação
+# ============================================================
+# 🔹 Certificados, codificação e CLI
+# ============================================================
 certifi==2025.10.5
 charset-normalizer==3.4.4
-
-# Ferramentas adicionais
 click==8.1.8
 packaging==25.0
-
